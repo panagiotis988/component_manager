@@ -13,11 +13,8 @@ def insert():
         code = details['code']
         characteristics = details['characteristics']
         quantity = details['quantity']
-        conn = mysql.connection
-        cur = conn.cursor()
-        cur.execute("INSERT INTO component (code, characteristics,quantity) VALUES (%s, %s, %s)",
-                    (code, characteristics, quantity))
-        mysql.connection.commit()
+      
+        mysql.sension.commit()
 
         return 'success'
     return render_template('insert.html')

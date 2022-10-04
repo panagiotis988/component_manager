@@ -1,4 +1,5 @@
-from main import *
+from main import app, render_template, Blueprint
+from mydb import mysql
 
 show_select = Blueprint('show_select', __name__, )
 
