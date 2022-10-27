@@ -1,6 +1,6 @@
-from flask import render_template
+from flask import render_template, request
 
-from main import *
+from main import Blueprint, mysql
 
 insert_component = Blueprint('insert_component', __name__)
 
